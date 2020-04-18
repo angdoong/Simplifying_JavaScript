@@ -51,3 +51,16 @@ Object.assign(defaults, book);
   주의! 
   기본값 객체를 갱신하면서 원본객체를 조작하게됨
 */
+
+const defaults = {
+  author: '',
+  title: '',
+  year: 2017,
+  rating: null,
+};
+const book = {
+  author: 'Joe Morgan',
+  title: 'Simplifying JavaScript',
+};
+const updated = Object.assign({}, defaults, book);
+// 첫번째 객체에 빈 객체를 사용하면 빈 객체에 새로운 값이 갱신되어 반환
