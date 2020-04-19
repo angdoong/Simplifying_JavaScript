@@ -64,3 +64,17 @@ const book = {
 };
 const updated = Object.assign({}, defaults, book);
 // 첫번째 객체에 빈 객체를 사용하면 빈 객체에 새로운 값이 갱신되어 반환
+
+/* 
+  Object.assign()으로 속성을 복사하면 값만 복사된다. 
+  일련의 문자열이나 정수만 있는경우에는 문제없이 복사 할 수 있지만
+  값이 다른 객체일때는 문제가 발생한다.
+*/
+const defualtEmployee = {
+  name: {
+    first: '',
+    last: '',
+  },
+  years: 0,
+};
+const employee = Object.assign({}, defualtEmployee);
